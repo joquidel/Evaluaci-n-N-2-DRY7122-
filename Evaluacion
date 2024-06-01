@@ -1,0 +1,34 @@
+def calcular_distancia(origen, destino):
+	# Distancia en kilómetros entre Santiago y Puerto Varas
+	distancia_km = 1016
+
+	# Velocidad promedio en km/h (puedes ajustarla según tus preferencias)
+	velocidad_promedio = 80
+
+	# Cálculo del tiempo de viaje en horas
+	tiempo_horas = distancia_km / velocidad_promedio
+
+	# Conversión a minutos y segundos
+	tiempo_minutos = int(tiempo_horas * 60)
+	tiempo_segundos = int((tiempo_horas * 60 - tiempo_minutos) * 60)
+
+	# Cálculo del combustible requerido (suponiendo 10 km/litro)
+	consumo_combustible_litros = distancia_km / 10
+
+	# Imprimir resultados
+	print(f"Distancia entre {origen} y {destino}: {distancia_km:.2f} km")
+	print(f"Duración del viaje: {tiempo_horas:.2f} horas ({tiempo_minutos} minutos {tiempo_segundos} segundos)")
+	print(f"Combustible requerido: {consumo_combustible_litros:.2f} litros")
+
+	# Narrativa del viaje
+	print(f"Ruta desde {origen} hasta {destino}:")
+	print("1. Sal de Santiago por la Autopista Central.")
+	# ... (continuar con las instrucciones de la ruta)
+
+# Solicitar ciudades de origen y destino
+ciudad_origen = input("Ingresa la ciudad de origen: ")
+ciudad_destino = input("Ingresa la ciudad de destino: ")
+
+# Calcular y mostrar resultados
+calcular_distancia(ciudad_origen, ciudad_destino)
+
